@@ -11,22 +11,22 @@
 
 
 // Register Options
-if (function_exists('acf_add_options_page')) {
-	acf_add_options_page(array(
-		'page_title' => 'Main menu',
-		'menu_title' => 'Main menu',
-		'show_in_graphql' => true,
-		'icon_url' => 'dashicons-admin-post',
-	));
-	acf_add_options_page(array(
-		'page_title'    => 'Contacts info',
-        'menu_title'    => 'Contacts info',
-		'show_in_graphql' => true,
-        'redirect'      => false,
-		'icon_url' => 'dashicons-admin-post',
-    ));
+// if (function_exists('acf_add_options_page')) {
+// 	acf_add_options_page(array(
+// 		'page_title' => 'Main menu',
+// 		'menu_title' => 'Main menu',
+// 		'show_in_graphql' => true,
+// 		'icon_url' => 'dashicons-admin-post',
+// 	));
+// 	acf_add_options_page(array(
+// 		'page_title'    => 'Contacts info',
+//         'menu_title'    => 'Contacts info',
+// 		'show_in_graphql' => true,
+//         'redirect'      => false,
+// 		'icon_url' => 'dashicons-admin-post',
+//     ));
 
-}
+// }
 
 // Даст Travelers’ Map видеть ваш CPT в настройках
 // add_filter('cttm_available_post_types', function ($types) {
