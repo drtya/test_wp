@@ -155,18 +155,6 @@ add_action('enqueue_block_editor_assets', function () {
 });
 
 
-// удаляем стили
-function remove_block_library_css() {
-    // Убираем стандартные стили блоков
-    wp_dequeue_style('wp-block-library');
-    wp_dequeue_style('wp-block-library-theme');
-    // Если используется WooCommerce, можно убрать его стили тоже
-    wp_dequeue_style('wc-block-style'); 
-}
-add_action('wp_enqueue_scripts', 'remove_block_library_css', 100);
-
-
-
 
 
 // Adds theme support for post formats.
