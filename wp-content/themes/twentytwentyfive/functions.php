@@ -135,11 +135,11 @@ if (function_exists('acf_add_options_page')) {
 
 
 
-// подключение скриптов
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('jquery');
+// // подключение скриптов
+// add_action('wp_enqueue_scripts', function () {
+//     wp_enqueue_script('jquery');
 
-});
+// });
 
 
 
