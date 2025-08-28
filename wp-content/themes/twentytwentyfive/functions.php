@@ -18,9 +18,6 @@ if (function_exists('acf_add_options_page')) {
 		'show_in_graphql' => true,
 		'icon_url' => 'dashicons-admin-post',
 	));
-}
-
-if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title'    => 'Contacts info',
         'menu_title'    => 'Contacts info',
@@ -28,6 +25,7 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false,
 		'icon_url' => 'dashicons-admin-post',
     ));
+
 }
 
 // Даст Travelers’ Map видеть ваш CPT в настройках
@@ -36,6 +34,9 @@ add_filter('cttm_available_post_types', function ($types) {
   return array_unique($types);
 });
 
+
+
+if (function_exists('register_graphql_object_type') && function_exists('register_graphql_field')) {
 register_graphql_object_type('MarkerImage', [
     'fields' => [
         'id' => ['type' => 'Int'],
@@ -129,6 +130,10 @@ add_action('graphql_register_types', function () {
         }
     ]);
 });
+}
+
+
+
 
 // подключение скриптов
 add_action('wp_enqueue_scripts', function () {
