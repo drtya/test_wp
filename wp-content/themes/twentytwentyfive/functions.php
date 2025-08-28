@@ -137,22 +137,18 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 
-// Подключение стилей в редакторе (но без JS!)
-add_action('enqueue_block_editor_assets', function () {
-    wp_enqueue_style(
-        'swiper-editor',
-        get_template_directory_uri() . '/template-parts/libs/swiper.min.css',
-        array(),
-        null
-    );
 
-    wp_enqueue_style(
-        'global-editor',
-        get_template_directory_uri() . '/template-parts/styles/globals.css',
-        array(),
-        null
-    );
-});
+
+// // удаляем стили
+// function remove_block_library_css() {
+//     // Убираем стандартные стили блоков
+//     wp_dequeue_style('wp-block-library');
+//     wp_dequeue_style('wp-block-library-theme');
+//     // Если используется WooCommerce, можно убрать его стили тоже
+//     wp_dequeue_style('wc-block-style'); 
+// }
+// add_action('wp_enqueue_scripts', 'remove_block_library_css', 100);
+
 
 
 
